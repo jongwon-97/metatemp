@@ -1,0 +1,208 @@
+/* 전체 스타일 초기화 */
+
+
+body {
+  background-color: #f8f9fa;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 상단 노란 정보 바 스타일 */
+.top-bar {
+  background-color: #f9a825;
+  color: white;
+  padding: 10px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.top-bar-content {
+  display: flex;
+  gap: 15px;
+}
+
+.top-bar-right {
+  font-weight: bold;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.top-bar-right .btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.top-bar-right .btn:hover {
+  background-color: #f1f1f1;
+}
+
+.top-bar-right .btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.top-bar-right .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* 메인 헤더 스타일 */
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0; /* 상하 패딩을 늘려서 공간 확보 */
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  width: 100%;
+}
+
+/* 로고 스타일 */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;  /* 로고와 메뉴 사이의 간격을 줄임 */
+}
+
+.logo {
+  height: 60px;  /* 로고 크기 */
+}
+
+.logoText {
+  font-size: 22px;
+  font-weight: bold;
+  color: #003c8f;
+  letter-spacing: 1px;
+  margin: 0;  /* 텍스트 마진 제거하여 중앙에 정렬 */
+}
+
+/* 메뉴 스타일 */
+.menu {
+  display: flex;
+  gap: 30px;
+  align-items: center; /* 메뉴 항목들이 수평으로 중앙 정렬되도록 */
+}
+
+.menu > ul {
+  display: flex;
+  gap: 30px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  color: #333;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.2s ease;
+  font-size: 16px;
+}
+
+.menu a:hover {
+  color: #f9a825;
+}
+
+/* 하위 메뉴 스타일 */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.submenu li {
+  white-space: nowrap;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 14px;
+}
+
+.submenu a:hover {
+  background-color: #f9a825;
+  color: white;
+}
+
+/* 드롭다운 활성화 */
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 10px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu > ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .top-bar-right {
+    margin-top: 10px;
+  }
+
+  .top-bar-right .btn {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 50px;
+  }
+
+  .logoText {
+    font-size: 18px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .top-bar-right .btn {
+    padding: 4px 8px;
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Fragment</title>
+  <link rel="stylesheet" href="/static/css/header/header.css">
+</head>
+<body>
+<div th:fragment="header">
+  <!-- 상단 노란 정보 바 -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between">
+      <div class="top-bar-left">
+
+      </div>
+      <div class="top-bar-right">
+        <a href="#" class="btn btn-primary">회원가입</a>
+        <a href="#" class="btn">로그인</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 메인 헤더 -->
+  <header class="main-header">
+    <div class="container d-flex justify-content-center align-items-center">
+      <!-- 로고와 메뉴 항목을 가로로 배치 -->
+      <div class="logo-container">
+      </div>
+
+      <!-- 메뉴 항목 -->
+      <nav class="menu">
+        <img src="/static/images/logo.png" alt="메타러닝 로고" class="logo">
+        <h1 class="logoText">메타러닝</h1>
+        <ul>
+          <li><a href="#">홈으로</a></li>
+          <li class="dropdown">
+            <a href="#">국비강의</a>
+            <ul class="submenu">
+              <li><a href="#">IT 국비 강의</a></li>
+              <li><a href="#">디자인 국비 강의</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">온라인 강의</a>
+            <ul class="submenu">
+              <li><a href="#">개발 강의</a></li>
+              <li><a href="#">디자인 강의</a></li>
+            </ul>
+          </li>
+          <li><a href="#">게시판</a></li>
+          <li><a href="#">마이페이지</a></li>
+          <li><a href="#">국비신청</a></li>
+          <li><a href="#">강사신청</a></li>
+          <li><a href="#">장바구니</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+</body>
+</html>
